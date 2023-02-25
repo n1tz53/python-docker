@@ -2,6 +2,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+@app.get("/{a}/{b}")
+async def root(a: int, b: int):
+    return a * b
